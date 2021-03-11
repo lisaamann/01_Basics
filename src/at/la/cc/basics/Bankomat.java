@@ -18,15 +18,15 @@ public class Bankomat {
             if (input == 1) {
                 System.out.println("Bitte wählen Sie den Betrag den Sie einzahlen möchten");
                 int einzahlung = scanner.nextInt();
-                int neuerKontostand = kontostand + einzahlung;
-                System.out.println("Ihr neuer Kontostand beträgt: " + neuerKontostand + "€");
+                kontostand = kontostand + einzahlung;
+                System.out.println("Ihr neuer Kontostand beträgt: " + kontostand + "€");
                 System.out.println("Möchten Sie weitere Einzahlungen vornehmen?");
                 int weiterEinzahlung = scanner.nextInt();
                 if (weiterEinzahlung == 1) ;
                 System.out.println("Bitte wählen Sie den Betrag den Sie einzahlen möchten");
                 int einzahlung2 = scanner.nextInt();
-                int neuerKontostand2 = neuerKontostand + einzahlung2;
-                System.out.println("Ihr neuer Kontostand beträgt: " + neuerKontostand2 + "€");
+                kontostand = kontostand + einzahlung2;
+                System.out.println("Ihr neuer Kontostand beträgt: " + kontostand + "€");
                 if (weiterEinzahlung == 2) ;
                 System.out.println("Vielen Dank, ich leite Sie zurück ins Hauptmenü");
             } else if (input == 2) {
