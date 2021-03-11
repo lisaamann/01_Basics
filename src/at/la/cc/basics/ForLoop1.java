@@ -1,10 +1,16 @@
 package at.la.cc.basics;
 
+import com.sun.jdi.IntegerType;
+
 public class ForLoop1 {
     public static void main(String[] args) {
-        for (int i = 1; i < 101; i++) {
-            System.out.println(i);
-            
+        //Zähle in einem For-Loop die Zahlen von 1 bis 100 (inklusive) zusammen
+        int ergebnis = 0;
+
+        for (int zahl = 1; zahl < 101; zahl++) {
+
+           ergebnis = zahl;
         }
+        System.out.println(ergebnis);
     }
 }
