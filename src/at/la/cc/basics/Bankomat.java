@@ -20,6 +20,15 @@ public class Bankomat {
                 int einzahlung = scanner.nextInt();
                 int neuerKontostand = kontostand + einzahlung;
                 System.out.println("Ihr neuer Kontostand beträgt: " + neuerKontostand + "€");
+                System.out.println("Möchten Sie weitere Einzahlungen vornehmen?");
+                int weiterEinzahlung = scanner.nextInt();
+                if (weiterEinzahlung == 1) ;
+                System.out.println("Bitte wählen Sie den Betrag den Sie einzahlen möchten");
+                int einzahlung2 = scanner.nextInt();
+                int neuerKontostand2 = neuerKontostand + einzahlung2;
+                System.out.println("Ihr neuer Kontostand beträgt: " + neuerKontostand2 + "€");
+                if (weiterEinzahlung == 2) ;
+                System.out.println("Vielen Dank, ich leite Sie zurück ins Hauptmenü");
             } else if (input == 2) {
                 System.out.println("Wieviel Geld wollen Sie abheben?");
                 int auszahlung = scanner.nextInt();
@@ -30,9 +39,9 @@ public class Bankomat {
                 }
             } else if (input == 3) {
                 System.out.println("Ihr Kontostand beträgt: " + kontostand);
-            } else if (input == 4){
+            } else if (input == 4) {
                 System.out.println("Vielen Dank und aufwiedersehen.");
-                System.exit(0);
+                istFertig=true;
             }
         }
 
