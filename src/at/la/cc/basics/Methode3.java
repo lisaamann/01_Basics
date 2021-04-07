@@ -25,7 +25,7 @@ public class Methode3 {
         //Eine Funktion die mir zurückgibt ob eine Zahl eine Primzahl ist oder nicht.
     }
     public static boolean primzahl(int a){
-        boolean isPrim = true;
+        boolean isPrim = false;
         int teiler = 2;
         double result = a % teiler;
         boolean beenden = true;
