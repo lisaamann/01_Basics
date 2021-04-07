@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class BoolischeOperatoren {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //Der Fahrer darf das Motorrad fahren wenn er 24 Jahre oder aelter ist
         //oder den Motorradführerschein besitzt aber nicht mehr in der Probezeit ist
         int alter = 24;

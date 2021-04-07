@@ -2,8 +2,8 @@ package at.la.cc.basics;
 
 
 
-public class String {
-    public static void main(String[] args) {
+public class String1 {
+    public static void main(String1[] args) {
         //Schreibe ein Programm, das ausgibt, an welchen Stellen in einer
         //Zeichenkette ein Vokal vorkommt.
         //Für jeden Vokal soll es einen Strich ausgeben, für alle anderen

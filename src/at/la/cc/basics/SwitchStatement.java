@@ -3,7 +3,7 @@ package at.la.cc.basics;
 import java.util.Random;
 
 public class SwitchStatement {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //Erstelle eine Zufallszahl zwischen 5 und 100
         int min = 5;
         int max = 10;

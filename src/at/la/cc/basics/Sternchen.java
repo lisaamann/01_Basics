@@ -1,11 +1,11 @@
 package at.la.cc.basics;
 
 public class Sternchen {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //While Sternchen
         int i = 0;
         int d = 0;
-        String stern = "*";
+        String1 stern = "*";
         while (i < 5) {
             System.out.println(stern);
             stern = stern + "*";

@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class Rechenaufgabe {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         int neuezahl = 7;
 
         System.out.println(++neuezahl);

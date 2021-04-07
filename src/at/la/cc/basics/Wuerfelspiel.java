@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Wuerfelspiel {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //Erstelle ein Würfelspiel! Du spielst gegen den Computer. Wenn das Spiel startet (mit einem kleinen Menü), hat der Spieler 6 Würfe.
         //Er spielt dabei gegen den Computer. Wenn die Augensumme höher ist als jene des Computers hat der Spieler gewonnen, ansonsten der Computer.
         //es braucht nur random. der user macht enter für eingabe dann kommt random 1 und anschließend random 2 für den computer
@@ -41,7 +41,7 @@ public class Wuerfelspiel {
     }
 
     public static void menu() {
-        String[] menu = {"1 = Spielen", "2 = Beenden"};
+        String1[] menu = {"1 = Spielen", "2 = Beenden"};
         System.out.println("Willkommen im Würfelspiel.");
         System.out.println("Bitte wählen Sie aus dem Menü");
         for (int i = 0; i < menu.length; i++) {

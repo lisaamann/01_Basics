@@ -1,9 +1,7 @@
 package at.la.cc.basics;
 
-import com.sun.jdi.IntegerType;
-
 public class ForLoop1 {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //Zähle in einem For-Loop die Zahlen von 1 bis 100 (inklusive) zusammen
         int ergebnis = 0;
 

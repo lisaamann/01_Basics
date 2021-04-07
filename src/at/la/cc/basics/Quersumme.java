@@ -1,15 +1,13 @@
 package at.la.cc.basics;
 
-import java.util.Random;
-
 public class Quersumme {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         //wie man eine quersumme ausrechnet
 
         int quersumme = 1254; //Quersumme = 12
 
         //integer in string umwandeln
-        String integerToString = Integer.toString(quersumme);
+        String1 integerToString = Integer.toString(quersumme);
         char[] zahlenfolge = integerToString.toCharArray();
 
         //zahlenfolge.lenght sagt er soll solange durchgehen wie die abfolge des arrays lang ist

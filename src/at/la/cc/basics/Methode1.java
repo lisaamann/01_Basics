@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class Methode1 {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         int zahlEins = 15;
         int zahlZwei = 5;
         double ergebnis = subtraction(zahlEins, zahlZwei);

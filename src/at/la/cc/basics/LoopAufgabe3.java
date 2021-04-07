@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class LoopAufgabe3 {
-    public static void main(String[] args) {
+    public static void main(String1[] args) {
         int ergebnis = 0;
         for (int i = -400; i <501 ; i++) {
             if (i%5 == 0){
