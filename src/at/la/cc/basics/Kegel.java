@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class Kegel {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         int kegel = 8;
         switch (kegel){
             case 1: case 2: case 3:

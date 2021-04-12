@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Methode3 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //eine Primzahl ist durch sich selber oder durch eins teilbar. Beispiel 14 ist durch sich selbst und durch 1 teilbar aber auch durch andere Zahlen wie 7.
         Scanner sc = new Scanner(System.in);
         System.out.println("Bitte eine Zahl eingeben");

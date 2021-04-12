@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class LoopAufgabe5 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //Erstelle einen While-Loop, der folgendermaßen herunterzählt:
         //1000
         //991

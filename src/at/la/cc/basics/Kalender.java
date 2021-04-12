@@ -1,10 +1,10 @@
 package at.la.cc.basics;
 
 public class Kalender {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
 
-        String1[] months = {"Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "Septemeber", "Oktober", "November", "Dezember"};
-        String1[] weekDays = {"Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"};
+        String[] months = {"Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "Septemeber", "Oktober", "November", "Dezember"};
+        String[] weekDays = {"Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"};
 
         int month = 1;
         int startDay = 1;

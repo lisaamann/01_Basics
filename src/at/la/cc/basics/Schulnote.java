@@ -3,7 +3,7 @@ package at.la.cc.basics;
 import java.util.Scanner;
 
 public class Schulnote {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         int note = 1;
         switch (note) {
             case 1:
@@ -26,10 +26,10 @@ public class Schulnote {
         ;
 
         Scanner scanner = new Scanner(System.in);
-        String1 noteInput = scanner.nextLine();
+        String noteInput = scanner.nextLine();
 
 
-        String1 note2upperCase = noteInput.toUpperCase();
+        String note2upperCase = noteInput.toUpperCase();
         //System.out.println(note2upperCase);
         switch (note2upperCase) {
             case "SEHR GUT":

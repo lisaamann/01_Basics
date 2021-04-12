@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Array3 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
 
         List<Integer> zahl = Arrays.asList(8, 3, 2, 22, 8, 22);
 

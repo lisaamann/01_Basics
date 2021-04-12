@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class QuersummeAufgabe1 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
 
         for (int i = 1; i < 1000; i++) {
             int zahl = i;

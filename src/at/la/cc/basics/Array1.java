@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class Array1 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //Erstelle ein Array von 10 ganzen Zahlen.
         //Gehe das Array in einem Loop durch und berechne die Summe!
         int[] zahl = {2, 5, 8, 7, 10, 12, 14, 17, 3, 4};

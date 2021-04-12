@@ -3,7 +3,7 @@ package at.la.cc.basics;
 import java.util.Random;
 
 public class Array2 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //Erstelle ein Array von 50 Zufallszahlen mit Werten zwischen 0 und 100.
         //Gib alle Zahlen in einem For-Loop aus und berechne gleichzeitig die Summe der Zahlen.
 

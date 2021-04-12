@@ -1,13 +1,13 @@
 package at.la.cc.basics;
 
 public class Quersumme {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //wie man eine quersumme ausrechnet
 
         int quersumme = 1254; //Quersumme = 12
 
         //integer in string umwandeln
-        String1 integerToString = Integer.toString(quersumme);
+        String integerToString = Integer.toString(quersumme);
         char[] zahlenfolge = integerToString.toCharArray();
 
         //zahlenfolge.lenght sagt er soll solange durchgehen wie die abfolge des arrays lang ist

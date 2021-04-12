@@ -1,9 +1,9 @@
 package at.la.cc.basics;
 
 public class MethodenDaniel {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
 
-        String1 output = sagHallo("Hallo");
+        String output = sagHallo("Hallo");
         System.out.println(output);
 
         output = sagHallo("Lisa");
@@ -15,7 +15,7 @@ public class MethodenDaniel {
 
 
     }
-    public static String1 sagHallo(String1 input) {
+    public static String sagHallo(String input) {
         return input;
     }
 

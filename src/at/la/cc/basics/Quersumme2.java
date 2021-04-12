@@ -1,7 +1,7 @@
 package at.la.cc.basics;
 
 public class Quersumme2 {
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         //Gib alle Zahlen zwischen 0 und 1000 aus, bei welchen die Quersumme ein vielfaches von 7 ist.
         //zBsp. 49 ist 7 mal durch 7 teilbar
 

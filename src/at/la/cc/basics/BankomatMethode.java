@@ -7,7 +7,7 @@ public class BankomatMethode {
     private static Object String;
     private static int kontostand = 1000;
 
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         boolean istFertig = false;
 
         while (!istFertig) {
@@ -56,7 +56,7 @@ public class BankomatMethode {
     }
 
     public static void menu() {
-        String1[] menu = {"1 = Einzahlen", "2 = Auzahlen", "3 = Kontostand", "4: Beenden"};
+        String[] menu = {"1 = Einzahlen", "2 = Auzahlen", "3 = Kontostand", "4: Beenden"};
         System.out.println("Bitte wählen Sie aus dem Menü");
         for (int i = 0; i < menu.length; i++) {
             System.out.println(menu[i]);

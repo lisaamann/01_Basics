@@ -7,7 +7,7 @@ public class Bankomat {
     private static Object String;
     private static int kontostand = 1000;
 
-    public static void main(String1[] args) {
+    public static void main(String[] args) {
         boolean istFertig = false;
 
         while (!istFertig) {

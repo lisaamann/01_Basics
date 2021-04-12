@@ -1,9 +1,9 @@
 package at.la.cc.basics;
 
 public class BasicVariable2 {
-    public static void main(String1[] args) {
-        String1 banana = "Banane";
-        String1 apple = "Apple";
+    public static void main(String[] args) {
+        String banana = "Banane";
+        String apple = "Apple";
         double bananaPricePerKilo = 2.14;
         double applePricePerKilo = 3.43;
         double bananaKilo = 0.34;
