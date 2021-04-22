@@ -1,11 +1,10 @@
-package at.la.cc.projects;
+package at.la.cc.basics;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.*;
 
-public class woerterErraten {
+public class WoerterErraten1 {
     public static Random random = new Random();
 
     public static void main(String[] args) {
@@ -35,8 +34,6 @@ public class woerterErraten {
                 }
 
             }
-
-
             while (true) {
                 System.out.println(starCollection);//gibt Sternchenwort aus
                 System.out.println(randomWord);
@@ -48,22 +45,20 @@ public class woerterErraten {
                 for (int i = 0; i < randomWord.length(); i++) {
                     if (userInput == randomWord.charAt(i)) {
                         starCollection[i] = userInput;
-                        break;
-                    } else {
-                        System.out.println("Buchstabe ist nicht vorhanden.");
                     }
-
-                    if (starCollection.equals(randomWord)) {//ab hier muss ich nochmal schauen warum er nicht aufhört
-                        System.out.println("Das erratene Wort ist " + randomWord);
-                        break;
-                    }
-                    break;
                 }
-
+                String s =String.valueOf(userInput);//Char-Eingabe in einen String umwandeln damit man die beiden Stirngs miteinander vergleichen kann
+                if(randomWord.contains(s))
+                {
+                }else{
+                    System.out.println("Nicht Vorhanden");
+                }
             }
+
         } else {
             System.out.println("Tschüssi");
         }
+
     }
 }
 
