@@ -1,7 +1,12 @@
 package at.la.cc.oop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     // Instanzvariablen / Gedächtnisvariablen
+    private Engine engine;
+    private List<RearMirror> mirrors;
     public String colore;
     public int fuelConsumption;
     public int fuelAmount;
@@ -9,8 +14,24 @@ public class Car {
     private String brand;
     public int amountOfRepetitions;
 
+    public Car(Engine engine, String colore, int fuelConsumption, int fuelAmount, String serialNumber, String brand, int amountOfRepetitions) {
+        this.engine = engine;
+        this.colore = colore;
+        this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = fuelAmount;
+        this.serialNumber = serialNumber;
+        this.brand = brand;
+        this.amountOfRepetitions = amountOfRepetitions;
+        this.mirrors = new ArrayList<>();
+    }
+
+    ;
 
     //region METHODEN
+    public void addMirror(RearMirror rearMirror) {
+        this.mirrors.add(rearMirror);
+    }
+
     public void drive() {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
         System.out.println("Ich fahre.");
@@ -39,11 +60,81 @@ public class Car {
         }
     }
 
-    public void getRemainingRange(){
+    public void getRemainingRange() {
         this.amountOfRepetitions = amountOfRepetitions;
         this.fuelAmount = fuelAmount;
         int remainingRange = (fuelAmount / amountOfRepetitions) * 100;
         System.out.println("Reichweite mit aktuellen Füllstand = " + remainingRange + " km");
     }
+
+    public void outputOfCarDetails() {
+        System.out.println("Ich bin ein " + brand + ", ich habe die Farbe " + colore + " und habe " + getEngine().getHorsePower() + " PS");
+    }
+
+    //endregion
+
+    //region GETTER SETTER
+
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public String getColore() {
+        return colore;
+    }
+
+    public void setColore(String colore) {
+        this.colore = colore;
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getAmountOfRepetitions() {
+        return amountOfRepetitions;
+    }
+
+    public void setAmountOfRepetitions(int amountOfRepetitions) {
+        this.amountOfRepetitions = amountOfRepetitions;
+    }
+
     //endregion
 }
