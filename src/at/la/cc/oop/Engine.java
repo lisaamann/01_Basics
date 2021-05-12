@@ -15,6 +15,8 @@ public class Engine {
     //region METHODEN
     //amount should be between 0 and 100
     public void drive(int amount) {
+        int amountMin = 1;
+        int amountMax = 100;
         System.out.println("Der Motor läuft mit: " + amount);
 
     }

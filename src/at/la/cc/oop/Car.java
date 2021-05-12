@@ -7,6 +7,7 @@ public class Car {
     // Instanzvariablen / Gedächtnisvariablen
     private Engine engine;
     private List<RearMirror> mirrors;
+    private List<Hoop> hoops;
     public String colore;
     public int fuelConsumption;
     public int fuelAmount;
@@ -23,6 +24,7 @@ public class Car {
         this.brand = brand;
         this.amountOfRepetitions = amountOfRepetitions;
         this.mirrors = new ArrayList<>();
+        this.hoops = new ArrayList<>();
     }
 
     ;
@@ -30,6 +32,10 @@ public class Car {
     //region METHODEN
     public void addMirror(RearMirror rearMirror) {
         this.mirrors.add(rearMirror);
+    }
+
+    public void addHoop(Hoop hoop){
+        this.hoops.add(hoop);
     }
 
     public void drive() {
