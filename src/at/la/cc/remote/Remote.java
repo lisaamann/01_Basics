@@ -13,22 +13,33 @@ public class Remote {
         this.batteries = new ArrayList<>();
     }
 
-    public void selectChannel(int channel){
+    public void selectChannel(int channel) {
         System.out.println("Channel " + channel + " selected.");
-        for (Batterie batterie : batteries){
+        for (Batterie batterie : batteries) {
             batterie.powerConsumption(0.7);
         }
     }
 
-    public double getStatusOfBatteries(){
-        double sum = (batteries.get(0).getLevel() + batteries.get(1).getLevel())/2;
+    public double getStatusOfBatteries() {
+        double sum = (batteries.get(0).getLevel() + batteries.get(1).getLevel()) / 2;
         return sum;
     }
 
     public void addBatterie(Batterie batterie) {
         if (this.batteries.size() >= 2) {
-            System.out.println("Batterystation is full.");
+            System.out.println("All places for batteries in the remonte are taken.");
             return;
-        } else {this.batteries.add(batterie);}
+        } else {
+            this.batteries.add(batterie);
+        }
+    }
+
+    public boolean getWarningIfLevelIsLow() {
+        boolean isLow = false;
+        if (getStatusOfBatteries() < 3.2)
+            System.out.println("Attention! The level of the batteries is low");
+        if (getStatusOfBatteries() > 3.2)
+            System.out.println("Batterylevel is good.");
+        return true;
     }
 }
