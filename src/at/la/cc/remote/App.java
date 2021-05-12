@@ -11,13 +11,11 @@ public class App {
         r1.addBatterie(b2);
         r1.addBatterie(b3);
 
-        System.out.println(r1.getWarningIfLevelIsLow());
+        System.out.println(r1.getStatusOfBatteries());
         r1.selectChannel(7);
         System.out.println(r1.getStatusOfBatteries());
-        System.out.println(r1.getWarningIfLevelIsLow());
         r1.selectChannel(2);
         System.out.println(r1.getStatusOfBatteries());
-        System.out.println(r1.getWarningIfLevelIsLow());
 
     }
 }

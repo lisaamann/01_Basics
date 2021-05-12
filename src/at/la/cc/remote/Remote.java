@@ -18,6 +18,8 @@ public class Remote {
         for (Batterie batterie : batteries) {
             batterie.powerConsumption(0.7);
         }
+        if (getStatusOfBatteries() < 3.2)
+            System.out.println("Attention! The level of the batteries is low");
     }
 
     public double getStatusOfBatteries() {
@@ -34,12 +36,4 @@ public class Remote {
         }
     }
 
-    public boolean getWarningIfLevelIsLow() {
-        boolean isLow = false;
-        if (getStatusOfBatteries() < 3.2)
-            System.out.println("Attention! The level of the batteries is low");
-        if (getStatusOfBatteries() > 3.2)
-            System.out.println("Batterylevel is good.");
-        return true;
-    }
 }
