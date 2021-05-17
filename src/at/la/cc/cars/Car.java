@@ -2,14 +2,13 @@ package at.la.cc.cars;
 
 public class Car {
     private Engine engine;
-    public String colore;
-    public int maxSpeed;
-    public int basicPrice;
-    public int basicWaste;
-    public producer producer;
-    public int d;
+    private String colore;
+    private int maxSpeed;
+    private int basicPrice;
+    private int basicWaste;
+    private Producer producer;
 
-    public Car(Engine engine, String colore, int maxSpeed, int basicPrice, int basicWaste, producer producer) {
+    public Car(Engine engine, String colore, int maxSpeed, int basicPrice, int basicWaste, Producer producer) {
         this.engine = engine;
         this.colore = colore;
         this.maxSpeed = maxSpeed;
@@ -20,7 +19,7 @@ public class Car {
 
     //METHODEN
     public int selectPriceOfCar(){
-        int price = (basicPrice / 100) * (100 - getProducer().getDiscountPerBrand());
+        int price = (basicPrice / 100) * (100 - getProducer().getDiscount());
         return price;
     }
 
@@ -66,11 +65,11 @@ public class Car {
         this.basicWaste = basicWaste;
     }
 
-    public at.la.cc.cars.producer getProducer() {
+    public Producer getProducer() {
         return producer;
     }
 
-    public void setProducer(at.la.cc.cars.producer producer) {
+    public void setProducer(Producer producer) {
         this.producer = producer;
     }
 
