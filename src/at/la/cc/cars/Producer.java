@@ -10,8 +10,6 @@ public class Producer {
         this.brand = brand;
     }
 
-
-
     //region GETTER SETTER
     public String getCountryOfOrigin() {
         return countryOfOrigin;

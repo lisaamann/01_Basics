@@ -7,6 +7,7 @@ public class Car {
     private int basicPrice;
     private int basicWaste;
     private Producer producer;
+    private int drivenDistance;
 
     public Car(Engine engine, String colore, int maxSpeed, int basicPrice, int basicWaste, Producer producer) {
         this.engine = engine;
@@ -15,10 +16,11 @@ public class Car {
         this.basicPrice = basicPrice;
         this.basicWaste = basicWaste;
         this.producer = producer;
+        this.drivenDistance = drivenDistance;
     }
 
     //METHODEN
-    public int selectPriceOfCar(){
+    public int selectPriceOfCar() {
         int price = (basicPrice / 100) * (100 - getProducer().getDiscount());
         return price;
     }
@@ -58,6 +60,12 @@ public class Car {
     }
 
     public int getBasicWaste() {
+        if (drivenDistance < 50000) {
+            System.out.println("The current fuelwaste is: " + basicWaste);
+        }
+        if (drivenDistance > 50000) {
+            System.out.println("The current fuelwaste is: " + (basicWaste * 1.98));
+        }
         return basicWaste;
     }
 
@@ -71,6 +79,14 @@ public class Car {
 
     public void setProducer(Producer producer) {
         this.producer = producer;
+    }
+
+    public int getDrivenDistance() {
+        return drivenDistance;
+    }
+
+    public void setDrivenDistance(int drivenDistance) {
+        this.drivenDistance = drivenDistance;
     }
 
 //endregion

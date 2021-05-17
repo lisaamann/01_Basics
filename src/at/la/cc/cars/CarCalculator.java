@@ -18,7 +18,11 @@ public class CarCalculator {
 
         System.out.println(c1.getProducer().getBrand());
         System.out.println(c1.getEngine().getHorsePower());
-        System.out.println("Ihr Preis für das Auto abzüglich des Preisnachlasses beträgt: " + c1.selectPriceOfCar());
+        System.out.println("Your carprice less the branddiscount is: " + c1.selectPriceOfCar());
+        c1.setDrivenDistance(20000);
+        System.out.println(c1.getBasicWaste());
+        c1.setDrivenDistance(51000);
+        System.out.println(c1.getBasicWaste());
 
     }
 }
