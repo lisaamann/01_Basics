@@ -29,7 +29,7 @@ public class Remote {
 
     public void addBatterie(Batterie batterie) {
         if (this.batteries.size() >= 2) {
-            System.out.println("All places for batteries in the remonte are taken.");
+            System.out.println("All places for batteries in the remote are taken.");
             return;
         } else {
             this.batteries.add(batterie);
