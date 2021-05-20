@@ -9,7 +9,7 @@ public class Phone {
     private SIM sim;
     private SDCard sdCard;
     private PhoneFile phoneFile;
-    private Camera camera;
+    private Camera camera = new Camera(100);
 
 
     //region CONSTRUCTOR
@@ -17,6 +17,8 @@ public class Phone {
         this.colore = colore;
         this.login = new Login();
         this.sim = sim;
+        this.sdCard = sdCard;
+        camera.setSdCard(this.sdCard);
     }
     //endregion
 
@@ -52,24 +54,25 @@ public class Phone {
 
     public void getFreeSpace(){
         //wenn man auf dem Phone abfragt getFreeSpace dann geht er zur SDcard und ruft dort die MEthode in der SD Card auf für getFreeSpace
+        sdCard.getFreeSpace();
     }
 
     public void printAllFile(){
         //hier geht das Phone her zu seiner SDcard und sagt gibt mir alle deine files und printet die dann in der console aus
+        System.out.println(sdCard.getAllFiles());
     }
 
     public void takePicture() {
         Scanner input = new Scanner(System.in);
             System.out.println("wanna take some photos?");
-            input.next();
-            if (input.equals("yes")) {
+            String eingabe = input.nextLine();
+            if (eingabe.equals("yes")) {
                 //wenn ich diese methode aufrufe dann geht das phone zu camera und sagt du mach mir ein picture
                 //die methode makePicture in der camera macht das bild und liefert das neue Phonefile dann zurück
                 //dann muss dass neue phonefile vom phone aus auf die SDcard gespeichert werden
             camera.makePicture();
-            phoneFile.getInfo();
             }
-            if (input.equals("no")) {
+            if (eingabe.equals("no")) {
                 System.out.println("Okay.");
             }
     }

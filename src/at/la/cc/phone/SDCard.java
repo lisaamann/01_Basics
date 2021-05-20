@@ -9,6 +9,7 @@ public class SDCard {
     private int capacity;
     private List<PhoneFile> phoneFiles;
     private Camera camera;
+    private PhoneFile phoneFile;
 
 
     //region CONSTRUCTOR
@@ -27,15 +28,21 @@ public class SDCard {
     }
 
     public void getFreeSpace(){
-        //wenn man auf dem Phone abfragt getFreeSpace dann geht er zur SDcard und ruft dir die MEthode in der SD Card auf für getFreeSpace
+        //wenn man auf dem Phone abfragt getFreeSpace dann geht er zur SDcard und ruft dort die Methode in der SD Card auf für getFreeSpace
         //er holt sich alle Files und berechnet von denen die gesamte größe und zieht es von der capacity ab und das ist dann der noch freie platz auf der SDcard
+
+        int freeSpace = capacity - (10);
+
+        System.out.println(freeSpace);
     }
 
-    public void getAllFiles(){
+    public ArrayList<PhoneFile> getAllFiles(){
         //liefert alle Files zurück wenn man es auf dem Phone abfragt
+        for (int i = 0; i < phoneFiles.size(); i++) {
+            System.out.println(phoneFiles.get(i).getInfo());
+        }
+        return (ArrayList<PhoneFile>) phoneFiles;
     }
-
-
 
     //endregion
 
@@ -56,7 +63,6 @@ public class SDCard {
         this.phoneFiles = phoneFiles;
     }
 
-
     public Camera getCamera() {
         return camera;
     }
@@ -64,5 +70,6 @@ public class SDCard {
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
+
 //endregion
 }

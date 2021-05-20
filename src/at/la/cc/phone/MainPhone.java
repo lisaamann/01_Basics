@@ -13,8 +13,8 @@ public class MainPhone {
         iPhone1.sayHello();
         iPhone1.makeCall();
         iPhone1.takePicture();
-
-
+        iPhone1.printAllFile();
+        iPhone1.getFreeSpace();
 
     }
 }

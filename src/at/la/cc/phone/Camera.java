@@ -13,12 +13,9 @@ public class Camera {
     //endregion
 
     //region METHODEN
-   public String makePicture(){
-        phoneFile.setName("Blumenwiese");
-        phoneFile.setExtension(".jpg");
-        phoneFile.setSize(50);
-       System.out.println(phoneFile.toString());
-        return phoneFile.toString();
+   public void makePicture(){
+        phoneFile = new PhoneFile("Blumenwiese", ".jpg", 50);
+        sdCard.safePicture(phoneFile);
    }
     //endregion
 
