@@ -6,6 +6,7 @@ public class PhoneFile {
     private String extension;//jpg
     private int size;//10MB
     private String name;//Filename
+    private int sumOfFileCapacity;
 
     //region CONSTRUCTOR
     public PhoneFile(String name, String extension, int size) {
@@ -21,9 +22,10 @@ public class PhoneFile {
         return getName() + getExtension() + " - Filesize is " + getSize() + " MB" ;
     }
 
-    public int sumOfPhoneSizes(){
-        int sum = IntStream.of(size).sum();
-        return sum;
+    public int sumOfFileSizes(){
+        this.sumOfFileCapacity = sumOfFileCapacity;
+        sumOfFileCapacity = IntStream.of(size).sum();
+        return sumOfFileCapacity;
     }
     //endregion
 

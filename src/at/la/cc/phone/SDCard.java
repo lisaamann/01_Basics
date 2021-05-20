@@ -4,12 +4,13 @@ import at.la.cc.oop.RearMirror;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class SDCard {
     private int capacity;
     private List<PhoneFile> phoneFiles;
     private Camera camera;
-    private PhoneFile phoneFile;
+
 
 
     //region CONSTRUCTOR
@@ -32,7 +33,6 @@ public class SDCard {
         //er holt sich alle Files und berechnet von denen die gesamte größe und zieht es von der capacity ab und das ist dann der noch freie platz auf der SDcard
 
         int freeSpace = capacity - (10);
-
         System.out.println(freeSpace);
     }
 
