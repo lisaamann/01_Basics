@@ -1,8 +1,5 @@
 package at.la.cc.camera;
 
-import at.la.cc.cars.Producer;
-import at.la.cc.phone.PhoneFile;
-
 public class Camera {
     private int Pixel;
     private int Gewicht;
@@ -10,21 +7,35 @@ public class Camera {
     private ProducerCamera producerCamera;
     private Lens lens;
     private SDcardCamera sDcardCamera;
-    private PhotoFilesCamera photoFilesCamera;
+    private PhotoFileCamera photoFileCamera;
 
     //region CONSTRUCTOR
-    public Camera(int pixel, int gewicht, String farbe, ProducerCamera producerCamera, Lens lens) {
+    public Camera(int pixel, int gewicht, String farbe, ProducerCamera producerCamera, Lens lens, SDcardCamera sDcardCamera) {
         Pixel = pixel;
         Gewicht = gewicht;
         Farbe = farbe;
         this.producerCamera = producerCamera;
         this.lens = lens;
+        this.sDcardCamera = sDcardCamera;
     }
     //endregion
 
     public void makePicture(){
-        photoFilesCamera = new PhotoFilesCamera("000000147", ".jpg", "2021-05-20", PhotoFilesCamera.SIZE.LARGE);
-        sDcardCamera.safePicture(photoFilesCamera);
+        photoFileCamera = new PhotoFileCamera("000000147", ".jpg", "2021-05-20", 6);
+        sDcardCamera.safePicture(photoFileCamera);
+    }
+
+    public int getFreeCapacity(){
+        return sDcardCamera.getFreeSpaceOfSDcard();
+    }
+
+    public void capacityIsLow(){
+        if (sDcardCamera.getCapacitySD() < 8){
+            System.out.println("Achtung! Der Speicher ist gering");
+        }
+        if (sDcardCamera.getCapacitySD() == 0){
+            System.out.println("Speicher aufgebraucht. Kein weiteres Foto möglich.");
+        }
     }
 
     //region GETTER SETTER
@@ -76,12 +87,12 @@ public class Camera {
         this.sDcardCamera = sDcardCamera;
     }
 
-    public PhotoFilesCamera getPhotoFilesCamera() {
-        return photoFilesCamera;
+    public PhotoFileCamera getPhotoFilesCamera() {
+        return photoFileCamera;
     }
 
-    public void setPhotoFilesCamera(PhotoFilesCamera photoFilesCamera) {
-        this.photoFilesCamera = photoFilesCamera;
+    public void setPhotoFilesCamera(PhotoFileCamera photoFileCamera) {
+        this.photoFileCamera = photoFileCamera;
     }
 
     //endregion

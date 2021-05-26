@@ -1,26 +1,37 @@
 package at.la.cc.camera;
 
-import at.la.cc.phone.PhoneFile;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class SDcardCamera {
     private int capacitySD;//16GB
-    private ArrayList<PhotoFilesCamera> photoFilesCameras;
+    private List<PhotoFileCamera> photoFileCameras;
     private Camera camera;
 
     //region CONSTRUCTOR
     public SDcardCamera(int capacitySD) {
         this.capacitySD = capacitySD;
-        this.photoFilesCameras = new ArrayList<>();
+        this.photoFileCameras = new ArrayList<>();
         this.camera = camera;
     }
     //endregion
 
-    public void safePicture(PhotoFilesCamera photoFilesCamera){
-        //wenn capacity frei ist und das phoneFile kleiner als die freie Größe ist, dann speichern
-        photoFilesCameras.add(photoFilesCamera);
-        System.out.println(photoFilesCamera);
+    public void safePicture(PhotoFileCamera photoFileCamera){
+        //speichert das neue Foto das mit der Camera-Methode gemacht wurde
+        photoFileCameras.add(photoFileCamera);
+        System.out.println(photoFileCamera.myToString());
+    }
+
+    public int getFreeSpaceOfSDcard() {
+
+        int size = 0;
+        for (PhotoFileCamera photoFileCamera : photoFileCameras) {
+            size = size + photoFileCamera.getSize();
+        }
+
+        this.capacitySD = this.capacitySD - size;
+
+        return capacitySD;
     }
 
     //region GETTER SETTER
@@ -32,12 +43,12 @@ public class SDcardCamera {
         this.capacitySD = capacitySD;
     }
 
-    public ArrayList<PhotoFilesCamera> getPhotoFilesCameras() {
-        return photoFilesCameras;
+    public List<PhotoFileCamera> getPhotoFilesCameras() {
+        return photoFileCameras;
     }
 
-    public void setPhotoFilesCameras(ArrayList<PhotoFilesCamera> photoFilesCameras) {
-        this.photoFilesCameras = photoFilesCameras;
+    public void setPhotoFilesCameras(ArrayList<PhotoFileCamera> photoFileCameras) {
+        this.photoFileCameras = photoFileCameras;
     }
 
     public Camera getCamera() {
@@ -47,5 +58,6 @@ public class SDcardCamera {
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
+
     //endregion
 }
