@@ -30,10 +30,10 @@ public class Camera {
     }
 
     public void capacityIsLow(){
-        if (sDcardCamera.getCapacitySD() < 8){
+        if (getFreeCapacity() <= 10){
             System.out.println("Achtung! Der Speicher ist gering");
         }
-        if (sDcardCamera.getCapacitySD() == 0){
+        if (getFreeCapacity() == 0){
             System.out.println("Speicher aufgebraucht. Kein weiteres Foto möglich.");
         }
     }

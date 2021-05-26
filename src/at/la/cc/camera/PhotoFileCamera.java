@@ -64,7 +64,7 @@ public class PhotoFileCamera {
 
 
     public String myToString() {
-        return nameOfFile;
+        return nameOfFile + extensionOfFile;
     }
 
 

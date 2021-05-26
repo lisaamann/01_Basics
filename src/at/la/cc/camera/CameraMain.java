@@ -14,7 +14,8 @@ public class CameraMain {
         System.out.println("Auf der Kamera ist das Objektive " + camera1.getLens().getProducerLens() + " aufgesetzt.");
 
         camera1.makePicture();
-        System.out.println(camera1.getFreeCapacity());
+        System.out.println("Der freie Speicherplatz beträgt: " + camera1.getFreeCapacity() + "GB");
+        camera1.capacityIsLow();
 
     }
 }
