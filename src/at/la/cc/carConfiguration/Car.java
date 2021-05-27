@@ -16,8 +16,9 @@ public class Car {
     }
 
     //endregion
-    public int getPricePerEngine(){
-        int priceEngine = (basicPrice / 100) + (100 + getEngine().getPricePerTYPE());
+    public int getPricePerCarEngine(){
+        engine.getPricePerEngine();
+        int priceEngine = (basicPrice  + getEngine().getPricePerEngine());
         return priceEngine;
     }
 

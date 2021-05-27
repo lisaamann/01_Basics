@@ -15,14 +15,21 @@ public class Engine {
     //endregion
 
     //region METHODEN
-    public int getPricePerTYPE(){
-        if (type.equals((TYPE.DIESEL))){
-            System.out.println("h");
+    public int getPricePerEngine(){
+        int price = 0;
+        if (type.equals(TYPE.DIESEL)&&horsepower==100){
             return 5000;
         }
-        if (type.equals((TYPE.GAS))){
-            return 0;
-        }return 0;
+        if (type.equals(TYPE.GAS)&&horsepower==100){
+            return 100;
+        }
+        if (type.equals(TYPE.DIESEL)&&horsepower==200){
+            return 7500;
+        }
+        if (type.equals(TYPE.GAS)&&horsepower==200){
+            return 2000;
+        }
+        return price;
     }
 
     //endregion
