@@ -83,28 +83,24 @@ public class CarConfigurator {
             case 1:
                 System.out.println("Diesel mit 100PS");
                 c1.setEngine(e1);
-                System.out.println(c1.getEngine());
                 System.out.println("Der Preis beträgt : " + c1.getPricePerCarEngine());
                 c1.getEngine().getPricePerEngine();
                 break;
             case 2:
                 System.out.println("Gas mit 100PS");
                 c1.setEngine(e2);
-                System.out.println(c1.getEngine());
                 System.out.println("Der Preis beträgt : " + c1.getPricePerCarEngine());
                 c1.getEngine().getPricePerEngine();
                 break;
             case 3:
                 System.out.println("Diesel mit 200PS");
                 c1.setEngine(e3);
-                System.out.println(c1.getEngine());
                 System.out.println("Der Preis beträgt : " + c1.getPricePerCarEngine());
                 c1.getEngine().getPricePerEngine();
                 break;
             case 4:
                 System.out.println("Gas mit 200PS");
                 c1.setEngine(e4);
-                System.out.println(c1.getEngine());
                 System.out.println("Der Preis beträgt : " + c1.getPricePerCarEngine());
                 c1.getEngine().getPricePerEngine();
                 break;
@@ -114,6 +110,10 @@ public class CarConfigurator {
 
         //endregion
 
+
+        //region CSV File erstellen
+
+        //endregion
 
 
     }
