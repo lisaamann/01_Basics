@@ -110,13 +110,17 @@ public class CarConfigurator {
                 System.out.println("Falsche Eingabe.");
         }
 
+        //WARUM BERECHNET ER MIR DEN PREIS NOCH NICHT RICHTIG
+        //ER BEHÄLT DEN PREIS VON DER VORKALKULATION NICHT BEI WENN ER IN DIE ENGINE-BERECHNUNG REIN GEHT
+
         //endregion
 
 
+        //VOR ICH DAS FILE SCHREIBE MUSS ICH GLAUBE ERST ALLE PARAMETER HOLEN VOM KONFIGURIERTEN CAR
         //region CSV File erstellen
         try {
             FileWriter myWriter = new FileWriter("car_configuration.csv");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.write("Files in Java might be tricky, but it is fun enough!");//hier muss ich das File generieren
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
