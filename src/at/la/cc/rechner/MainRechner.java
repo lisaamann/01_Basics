@@ -7,6 +7,7 @@ public class MainRechner {
         Rechner rechner1 = new Rechner(10, 5);
         Waehrungsrechner waehrungsrechner1 = new Waehrungsrechner("€", 10);
         MWST_Rechner mwst_rechner1 = new MWST_Rechner(10, "CH", "Schweiz");
+        GeoRechner geoRechner1 = new GeoRechner();
         Scanner userInput = new Scanner(System.in);
 
         //region Grundrechnen
@@ -49,7 +50,35 @@ public class MainRechner {
         mwst_rechner1.setLaenderkuerzel(userInputMehrwertssteuer);
         mwst_rechner1.setLandByUserInput();
         System.out.println("Die Mehrwertssteuer in " + mwst_rechner1.getLand() + " beträgt " + mwst_rechner1.getMehrwertssteuer() + "%");
+        //endregion
 
+        //region GEO-Rechner
+        System.out.println("Sie sind nun beim GEO-Rechner angekommen");
+        System.out.println("Bitte wählen Sie ob Sie den Umfang eines Rechtecks(1), eines Quadrates(2) oder eines Kreises(3) berechnen wollen.");
+        int userInputGEO = userInput.nextInt();
+        if (userInputGEO==1){
+            System.out.println("Bitte geben Sie die Länge des Rechteckes ein");
+            double userInputLaenge = userInput.nextDouble();
+            geoRechner1.setRechtecklänge(userInputLaenge);
+            System.out.println("Bitte geben Sie die Breite des Rechtecks ein");
+            double userInputBreite = userInput.nextDouble();
+            geoRechner1.setRechteckbreite(userInputBreite);
+            geoRechner1.getRechteckUmfang(userInputLaenge, userInputBreite);
+            System.out.println("Der Umfang des Rechtecks beträgt: " + geoRechner1.getRechteckUmfang(userInputLaenge, userInputBreite));
+        }
+        if (userInputGEO==2){
+            System.out.println("Bitte geben Sie die Seite des Quadrates ein");
+            double userInputQuadralaenge = userInput.nextDouble();
+            geoRechner1.setQuadratlänge(userInputQuadralaenge);
+            System.out.println("Der Umfang des Quadrates beträgt: " + geoRechner1.getQuadratUmfang(userInputQuadralaenge));
+        }
+        if (userInputGEO==3){
+            System.out.println("Bitte geben Sie den Durchmesser des Kreises ein.");
+            double userInputKreis = userInput.nextDouble();
+            geoRechner1.setKreisdurchmesser(userInputKreis);
+            geoRechner1.getKreisUmfang(userInputKreis);
+            System.out.println("Der Umfang des Kreise beträgt: " + geoRechner1.getKreisdurchmesser());
+        }
         //endregion
 
     }
