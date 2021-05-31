@@ -17,8 +17,10 @@ public class Car {
 
     //endregion
     public int getPricePerCarEngine(){
+        this.basicPrice = basicPrice;
         engine.getPricePerEngine();
         int priceEngine = (basicPrice  + getEngine().getPricePerEngine());
+        basicPrice = priceEngine;
         return priceEngine;
     }
 
