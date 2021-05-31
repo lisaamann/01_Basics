@@ -24,7 +24,9 @@ public class Car {
 
 
     public int getPriceOfCar(){
+        this.basicPrice = basicPrice;
         int price = (basicPrice / 100) * (100 - getProducer().getDiscount());
+        basicPrice = price;
         return price;
     }
 

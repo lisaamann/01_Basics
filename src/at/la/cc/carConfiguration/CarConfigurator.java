@@ -20,7 +20,7 @@ public class CarConfigurator {
         //AUTIO A4; Benzin;220;60.000
         //endregion
         Scanner scanner = new Scanner(System.in);
-        boolean isPricePerEngineCalculated = false;
+        //boolean isPricePerEngineCalculated = false;
 
         Engine e1 = new Engine(100, Engine.TYPE.DIESEL);
         Engine e2 = new Engine(100, Engine.TYPE.GAS);
@@ -30,7 +30,7 @@ public class CarConfigurator {
         Producer p2 = new Producer(Producer.BRAND.VW);
         Producer p3 = new Producer(Producer.BRAND.SKODA);
 
-        Car c1 = new Car(e1, "Blau", 10000, p1);
+        Car c1 = new Car(e2, "Blau", 10000, p1);
         //region INTRO
         System.out.println("Willkommen im Autokonfigurator.");
         System.out.println("Der Preis für das Basisauto beträgt: " + c1.getBasicPrice() + "€");
@@ -59,7 +59,7 @@ public class CarConfigurator {
         }
         System.out.println("Schön das Sie sich für die Marke " + c1.getProducer() + " entschieden haben.");
         System.out.println("Diese Auswahl gewährt Ihnen als Stammkunde der Marke " + c1.getProducer() + " einen Preisnachlass von " + c1.getProducer().getDiscount() + "%");
-        System.out.println("Der aktuelle Preis beträgt: " + c1.getPriceOfCar() + "€");
+        System.out.println("Der aktuelle Preis beträgt: " + c1.getBasicPrice() + "€");
         //endregion
 
         //region Farbe wählen
@@ -68,7 +68,7 @@ public class CarConfigurator {
         String userInputColor = scanner.next();
         c1.setColor(userInputColor);
         System.out.println("Sie haben die Farbe " + c1.getColor().toUpperCase() + " für ihren neuen " + c1.getProducer() + " gewählt.");
-        System.out.println("Der aktuelle Preis beträgt: " + c1.getPriceOfCar() + "€");
+        System.out.println("Der aktuelle Preis beträgt: " + c1.getBasicPrice() + "€");
         System.out.println(" ");
         //endregion
 

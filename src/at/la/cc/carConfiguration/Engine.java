@@ -21,7 +21,7 @@ public class Engine {
             return 5000;
         }
         if (type.equals(TYPE.GAS)&&horsepower==100){
-            return 100;
+            return 0;
         }
         if (type.equals(TYPE.DIESEL)&&horsepower==200){
             return 7500;
