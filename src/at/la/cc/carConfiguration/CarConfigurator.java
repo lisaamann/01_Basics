@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class CarConfigurator {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //region ANLEITUNG
         //Lasse über eine Konsolenanwendung den Benutzer ein Auto konfigurieren.
         //Sprich, er kann auswählen ob er z.B. die 100 PS Version oder die 200 PS Version möchte,
@@ -125,7 +125,9 @@ public class CarConfigurator {
         //endregion
 
         //region create CSV File from configuration
-
+        FileWriter csv = new FileWriter("Car_Configuration");
+        csv.append("Test");
+        c1.getProducer().toString();
         //endregion
 
 
