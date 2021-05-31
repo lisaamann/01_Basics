@@ -8,6 +8,7 @@ public class MainRechner {
         Waehrungsrechner waehrungsrechner1 = new Waehrungsrechner("€", 10);
         MWST_Rechner mwst_rechner1 = new MWST_Rechner(10, "CH", "Schweiz");
         GeoRechner geoRechner1 = new GeoRechner();
+        ReichweitenRechner reichweitenRechner1 = new ReichweitenRechner(50,7.5);
         Scanner userInput = new Scanner(System.in);
 
         //region Grundrechnen
@@ -79,6 +80,14 @@ public class MainRechner {
             geoRechner1.getKreisUmfang(userInputKreis);
             System.out.println("Der Umfang des Kreise beträgt: " + geoRechner1.getKreisdurchmesser());
         }
+        //endregion
+
+
+        //region Reichweitenrechner
+        System.out.println("Bitte geben Sie ein wie viel Tank Sie noch haben");
+        double userInputReichweite = userInput.nextDouble();
+        reichweitenRechner1.setTankstand(userInputReichweite);
+        System.out.println("Sie können noch " + reichweitenRechner1.getNochMoeglicheReichweite() + " Kilometer mit dem aktuellen Tankstand fahren.");
         //endregion
 
     }
