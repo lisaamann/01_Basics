@@ -11,6 +11,8 @@ public class Kreditkonto extends KontoZumVererben{
     //region METHODEN
     public double Ratenrückzahlung(){
         double Rate = 0;
+        Rate = (getKontostand()/12);
+        Rate = (Rate/100) * (100+Kreditzins);
         return Rate;
     }
     //endregion
