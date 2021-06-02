@@ -7,4 +7,11 @@ public class Kreditkonto extends KontoZumVererben{
         super(kontostand, kontoinhaber);
         this.Kreditzins = kreditzins;
     }
+
+    //region METHODEN
+    public double Ratenrückzahlung(){
+        double Rate = 0;
+        return Rate;
+    }
+    //endregion
 }

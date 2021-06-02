@@ -12,5 +12,9 @@ public class KontoMain {
         System.out.println(sparbuch1.getKontostand() + "€");
         sparbuch1.KontostandMitZinsen();
         System.out.println("Ihr aktuelles Sparbuchgutehaben beträgt: " + sparbuch1.KontostandMitZinsen() + "€");
+
+        Kreditkonto kreditkonto1 = new Kreditkonto(5000, "Susi Superlustig", 3.50);
+        kreditkonto1.Ratenrückzahlung();
+        System.out.println("Ihre Rate für den Kredit von " + kreditkonto1.Kontostand + "€ beträgt " + kreditkonto1.Ratenrückzahlung() + "€ für die Laufzeit von 12 Monaten.");
     }
 }
