@@ -3,21 +3,24 @@ package at.la.cc.konto;
 public class KontoZumVererben {
     public double Kontostand;
     public String Kontoinhaber;
-    public double Zahlung;
-    public double Überziehungsrahmen;
+    public double Betrag;
 
-    //region CONSTRUCTOR
-    public KontoZumVererben(double kontostand, String kontoinhaber, double zahlung, double überziehungsrahmen) {
+    public KontoZumVererben(double kontostand, String kontoinhaber) {
         Kontostand = kontostand;
         Kontoinhaber = kontoinhaber;
-        this.Zahlung = Zahlung;
-        this.Überziehungsrahmen = Überziehungsrahmen;
     }
-    //endregion
 
     //region METHODEN
-    public void einzahlung() {
+    public double einzahlen(double betrag) {
+        System.out.println("Einzahlung über " + betrag + "€");
+        this.Kontostand += betrag;
+        return betrag;
+    }
 
+    public double auszahlung(double betrag) {
+        System.out.println("Auszahlung über " + betrag + "€");
+        this.Kontostand -= betrag;
+        return betrag;
     }
 
     //endregion
@@ -40,12 +43,12 @@ public class KontoZumVererben {
         Kontoinhaber = kontoinhaber;
     }
 
-    public double getZahlung() {
-        return Zahlung;
+    public double getBetrag() {
+        return Betrag;
     }
 
-    public void setZahlung(double zahlung) {
-        Zahlung = zahlung;
+    public void setZahlung(double Betrag) {
+        Betrag = Betrag;
     }
     //endregion
 }
