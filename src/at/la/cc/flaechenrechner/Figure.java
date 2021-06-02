@@ -9,8 +9,6 @@ public class Figure {
     }
     //endregion
 
-
-
     //region GETTER SETTER
     public String getName() {
         return name;
