@@ -1,8 +1,11 @@
 package at.la.cc.konto;
 
 public class Sparbuch extends KontoZumVererben{
-    public Sparbuch(double kontostand, String kontoinhaber){
+    private double Zinsen;
+
+    public Sparbuch(double kontostand, String kontoinhaber, double zinsen){
         super(kontostand, kontoinhaber);
+        this.Zinsen = zinsen;
     }
 
     @Override
@@ -18,5 +21,13 @@ public class Sparbuch extends KontoZumVererben{
     @Override
     public double einzahlen(double betrag){
         return super.einzahlen(betrag);
+    }
+
+    public double ZinsBerechnung(){
+        return this.Zinsen * super.getKontostand();
+    }
+
+    public double KontostandMitZinsen(){
+        return getKontostand() + ZinsBerechnung();
     }
 }
