@@ -2,7 +2,6 @@ package at.la.cc.flaechenrechner;
 
 public class Figure {
     public String name;
-    public double area;
 
     //region CONSTURCTOR
     public Figure(String name) {
@@ -12,22 +11,13 @@ public class Figure {
 
 
 
-
     //region GETTER SETTER
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public void getArea(double area){
-        this.area = area;
+    public double getArea(double zahl1, double zahl2){
+        return zahl1 * zahl2;
     }
     //endregion
 }
