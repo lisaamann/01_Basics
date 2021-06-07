@@ -12,5 +12,7 @@ public class Main {
 
         Dog dog1 = new Dog(40,50);
         dog1.bark();
+        zoo1.addAnimal(dog1);
+        zoo1.printAnimals();
     }
 }
